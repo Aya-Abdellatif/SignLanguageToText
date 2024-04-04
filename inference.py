@@ -5,7 +5,7 @@ import mediapipe as mp
 import tensorflow as tf
 
 
-model = keras.models.load_model('SignLanguage10C1.h5')
+model = keras.models.load_model('SignLanguage9C991.h5')
 mp_hands = mp.solutions.hands
 mp_drawing = mp.solutions.drawing_utils
 hands = mp_hands.Hands()
