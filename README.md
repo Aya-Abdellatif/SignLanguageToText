@@ -16,16 +16,16 @@ The dataset used to train the model consists of 241 image all created manually v
 # How to Use
 ## Installtion
 To install the dependencies, run:
-`pip install -r requirements.txt`
+```pip install -r requirements.txt```
 ## Usage
 To use your camera to categorize realtime video data of sign language, run:
-`python inference.py`
+```python inference.py```
 This will open a window showing camera, make a gesture with your hand and it will put a box around your hand with the category on it
 
 # How it Works
 ## Collecting Images
 To collect Images of yourself doing gestures of sign languages, run:
-`python datacollect.py`
+```python datacollect.py```
 This python file opens the camera, wait for **5** seconds at the start and then take `imgnums` images (number of images). There's a **2** second-cooldown between each image (Try to put your hand in a different place in order for the dataset to be as diverse as possible). Feel Free to change those variables to suit your needs
 
 ## Training
