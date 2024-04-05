@@ -1,6 +1,6 @@
-mediapipe
-OpenCV-python
-numpy
-keras
-tensorflow
-scikit-learn
+mediapipe==0.10.10
+opencv-python==4.8.1.78
+numpy==1.26.2
+keras==3.1.1
+tensorflow==2.16.1
+scikit-learn==1.4.1.post1
