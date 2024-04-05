@@ -15,8 +15,10 @@ The dataset used to train the model consists of 241 image all created manually v
 **Important Note 2:** You have to install Python 3.10.6
 # How to Use
 ## Installtion
-To install the dependencies, run:<br>
-```pip install -r requirements.txt```
+To install the dependencies, run:
+```bash
+pip install -r requirements.txt
+```
 ## Usage
 To use your camera to categorize realtime video data of sign language, run:<br>
 ```python inference.py```<br>
