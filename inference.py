@@ -7,20 +7,14 @@ import tensorflow as tf
 
 model = keras.models.load_model('SignLanguage9C991.h5')
 mp_hands = mp.solutions.hands
-mp_drawing = mp.solutions.drawing_utils
 hands = mp_hands.Hands()
 
 
 
 cap = cv.VideoCapture(0)
-cap.set(cv.CAP_PROP_FRAME_WIDTH, 600)
-cap.set(cv.CAP_PROP_FRAME_HEIGHT, 500)
 
 CATEGORIES = ["hello", "yes", "no", "iloveyou", "callme", "goodjob", "highfive", "dislike", "peace"]
 
-
-def get_zero_hand():
-  return [[0, 0, 0]] * 21
 
 def get_landmark_array(landmarks):
   arr = []
@@ -29,7 +23,7 @@ def get_landmark_array(landmarks):
   return np.array(arr)
 
 
-def get_rectange(landmarks, h, w):
+def get_rectangle(landmarks, h, w):
     x_max, y_max, x_min, y_min = 0, 0, w, h
     for lm in landmarks:
         x, y = int(lm.x * w), int(lm.y * h)
@@ -54,7 +48,7 @@ def predict(img, draw_rectangle=True):
       # Drawing Rectangle
       if draw_rectangle:
         h, w, c = img.shape
-        x_min, y_min, x_max, y_max = get_rectange(hand.landmark, h, w)
+        x_min, y_min, x_max, y_max = get_rectangle(hand.landmark, h, w)
         cv.rectangle(img, (x_min, y_min), (x_max, y_max), (0, 255, 0), 2)
 
 
